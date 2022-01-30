@@ -2,7 +2,7 @@
 #include <stdio.h>
 // Calling OS functions libraries.
 #include <unistd.h>
-// Used for pud_t type, currently this include is pointless.
+// Used for pid_t type, currently this include is pointless.
 #include <sys/types.h>
 
 int main(int argc, char** argv) {
