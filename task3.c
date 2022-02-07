@@ -14,7 +14,7 @@ int main(int argc, char **argv, char **envp) {
 		printf("Argument %d: %s\n", i, argv[i]);
 	}
 
-	// Outptting environment parameters.
+	// Outputting environment's parameters.
 	char **it;
 	it = envp;
 	int counter = 0;
@@ -22,7 +22,6 @@ int main(int argc, char **argv, char **envp) {
 		if (*it == 0) {
 			break;
 		}
-
 		printf("Environment parameter %d: %s\n", ++counter, *it);
 		++it;
 	}
