@@ -4,7 +4,7 @@ by Oleg Sidorenkov BSE204
 ## Task 1:
 
 ### Guide:
-- Write ***gcc task1.c -o get_user_info*** to compile the project
+- Write ***gcc -o task1 task1.c*** to compile the project
 - And now write ***./task1*** to run it
 
 ### Observations:
@@ -37,7 +37,7 @@ Looks like after every launch the same parent process forks a new child, who's I
 ## Task2:
 
 ### Guide:
-- Write ***gcc task2.c -o get_user_info*** to compile the project
+- Write ***gcc -o task2 task2.c*** to compile the project
 - And now write ***./task2*** to run it
 
 ### Observations:
