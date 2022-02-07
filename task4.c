@@ -16,7 +16,7 @@ int main(int argc, char** argv, char** envp) {
 	
 	if (pid == 0) {
 		printf("Hey there, I am a child process!\n");
-        printf("And I will run ls command!\n");
+        	printf("And I will run ls command!\n");
 		(void) execle("/bin/ls", "-al", 0, envp);
 	} else {
 		printf("Hello, I am a parent process!\n");
