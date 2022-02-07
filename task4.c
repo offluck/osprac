@@ -5,7 +5,7 @@
 // Used for pid_t type.
 #include <sys/types.h>
 
-int main(int argc, char** argv) {
+int main(int argc, char** argv, char** envp) {
 	pid_t pid;
 	pid = fork();
 
@@ -16,6 +16,8 @@ int main(int argc, char** argv) {
 	
 	if (pid == 0) {
 		printf("Hey there, I am a child process!\n");
+        printf("And I will run ls command!\n");
+		(void) execle("/bin/ls", "-al", 0, envp);
 	} else {
 		printf("Hello, I am a parent process!\n");
 	}
