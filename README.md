@@ -1,4 +1,2 @@
-# Some Operating System course practice
+# Lab 5
 by Oleg Sidorenkov BSE204
-
-![alt text](https://github.com/OFFLUCK/osprac/blob/main/meme.png)
