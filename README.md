@@ -1,2 +1,2 @@
-# Lab 5
+# Lab 6
 by Oleg Sidorenkov BSE204
