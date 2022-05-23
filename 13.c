@@ -6,7 +6,8 @@
 
 int main() {
     int fd;
-    char path_name[1024] = "filesdata/a.txt";
+
+    char path_name[1024] = "for_links/a.txt";
     if ((fd = open(path_name, O_CREAT | O_EXCL, 0666)) < 0) {
         printf("Can\'t create file\n");
         exit(-1);
@@ -28,6 +29,7 @@ int main() {
         
         strncpy(prev_name, new_name, destination_size);
         prev_name[destination_size - 1] = '\0';
+        // prev_name = new_name
         
         strcpy(new_name, "a");
         
@@ -35,6 +37,7 @@ int main() {
         sprintf(buffer, "%d", counter);
         strcat(new_name, buffer);
         new_name[sizeof(new_name) - 1] = '\0';
+        // new_name увеличилось
         if (close(fd) < 0) {
             exit(-1);
         }
