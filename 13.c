@@ -7,7 +7,7 @@
 int main() {
     int fd;
 
-    char path_name[1024] = "for_links/a.txt";
+    char path_name[1024] = "filesdata/a.txt";
     if ((fd = open(path_name, O_CREAT | O_EXCL, 0666)) < 0) {
         printf("Can\'t create file\n");
         exit(-1);
