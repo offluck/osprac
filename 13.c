@@ -6,17 +6,18 @@
 
 int main() {
     int fd;
+    const int len = 256;
 
-    char path_name[1024] = "filesdata/a.txt";
+    char path_name[len] = "filesdata/a.txt";
     if ((fd = open(path_name, O_CREAT | O_EXCL, 0666)) < 0) {
         printf("Can\'t create file\n");
         exit(-1);
     }
 
     int counter = 0;
-    char prev_name[1024] = "a.txt";
-    char new_name[1024] = "a0";
-    char s[1024];
+    char prev_name[len] = "a.txt";
+    char new_name[len] = "a0";
+    char s[len];
     do {
         strcpy(s, "filesdata/");
         strcat(s, new_name);
