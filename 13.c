@@ -18,7 +18,7 @@ int main() {
     char new_name[1024] = "a0";
     char s[1024];
     do {
-        strcpy(s, "for_links/");
+        strcpy(s, "filesdata/");
         strcat(s, new_name);
         if (symlink(prev_name, s) < 0) {
             printf("Error while creating a link\n");
@@ -29,7 +29,6 @@ int main() {
         
         strncpy(prev_name, new_name, destination_size);
         prev_name[destination_size - 1] = '\0';
-        // prev_name = new_name
         
         strcpy(new_name, "a");
         
@@ -37,12 +36,11 @@ int main() {
         sprintf(buffer, "%d", counter);
         strcat(new_name, buffer);
         new_name[sizeof(new_name) - 1] = '\0';
-        // new_name увеличилось
         if (close(fd) < 0) {
             exit(-1);
         }
     } while ((fd = open(s, O_RDONLY, 0666)) >= 0);
 
-    printf("Counter: %d\n", counter - 1);
+    printf("Counter: %d\n", --counter);
     return 0;
 }
