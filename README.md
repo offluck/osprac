@@ -1,4 +1,6 @@
-# Some Operating System course practice
+# HW01
 by Oleg Sidorenkov BSE204
 
-![alt text](https://github.com/OFFLUCK/osprac/blob/main/meme.png)
+### Guide:
+- Write ***gcc -o get_user_info get_user_info.c*** to compile the project
+- And now write ***./get_user_info*** to run it
